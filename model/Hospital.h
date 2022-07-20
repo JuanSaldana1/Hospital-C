@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   Hospital.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jsaldana <jsaldana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 19:19:58 by jsaldana          #+#    #+#             */
-/*   Updated: 2022/07/20 14:19:46 by jsaldana         ###   ########.fr       */
+/*   Created: 2022/07/19 20:09:01 by jsaldana          #+#    #+#             */
+/*   Updated: 2022/07/19 20:21:02 by jsaldana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib/libc.h"
+#ifndef HOSPITAL_H
+# define HOSPITAL_H
+# include "Person.h"
 
-int	main(int argc, char const *argv[])
+typedef struct Hospital
 {
-	t_Person	person1;
-	t_Hospital	hospital;
+	t_Person	*person;
+}				t_Hospital;
 
-	person1.name = "Julio";
-	person1.surname = "Sanz";
-	person1.email = "jsanz@hospiutal.com";
-	hospital.person = malloc(sizeof(t_Person *));
-	hospital.person[0] = person1;
-	check_dni(person1.dni);
-	free(hospital.person);
-	return (0);
-}
+#endif
