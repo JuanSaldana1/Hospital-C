@@ -6,7 +6,7 @@
 #    By: jsaldana <jsaldana@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/19 19:22:33 by jsaldana          #+#    #+#              #
-#    Updated: 2022/07/20 14:37:03 by jsaldana         ###   ########.fr        #
+#    Updated: 2022/07/20 14:40:15 by jsaldana         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,7 @@ SRC = main.c
 LIB = lib/libc.h
 RESDIR = res/
 
-
 all: $(NAME)
-
 $(NAME):
 	$(CC) -I $(LIB) $(CFLAGS) $(SRC) -o $(NAME)
 fclean:
