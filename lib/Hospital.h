@@ -6,7 +6,7 @@
 /*   By: jsaldana <jsaldana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 20:09:01 by jsaldana          #+#    #+#             */
-/*   Updated: 2022/07/19 20:21:02 by jsaldana         ###   ########.fr       */
+/*   Updated: 2022/09/05 18:09:45 by jsaldana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 typedef struct Hospital
 {
-	t_Person	*person;
+	struct s_Person	*person;
 }				t_Hospital;
 
 #endif

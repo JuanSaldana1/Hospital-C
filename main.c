@@ -6,7 +6,7 @@
 /*   By: jsaldana <jsaldana@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 19:19:58 by jsaldana          #+#    #+#             */
-/*   Updated: 2022/07/21 10:57:49 by jsaldana         ###   ########.fr       */
+/*   Updated: 2022/09/05 18:32:49 by jsaldana         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,21 @@
 
 int	main(int argc, char const *argv[])
 {
-	t_Person	person1;
+	int			selected_option;
 	t_Hospital	hospital;
 
-	(void)**argv;
-	if (argc == 1)
+	(void)argv;
+	write(1, "\033[0;31mBienvenido al programa de gestión del hospital.\n\n\033[0m", 62);
+	while (42)
 	{
-		options();
+		if (argc == 1)
+			selected_option = options();
+		else
+			exit(1);
+		if (selected_option == 0)
+			exit (0);
+		else if (selected_option == 1)
+			hospital.person = create_person();
+		printf("key: %d\nNombre: %s\n", hospital.person->key, hospital.person->name);
 	}
-	person1.name = "Julio";
-	person1.surname = "Sanz";
-	person1.dni = "12345678M";
-	person1.email = "jsanz@hospiutal.com";
-	hospital.person = malloc(sizeof(t_Person *));
-	person1.dni = malloc(9);
-	hospital.person[0] = person1;
-	printf("%i", check_dni(person1.dni));
-	free(hospital.person);
-	free(person1.dni);
-	exit(0);
-	return (0);
 }
